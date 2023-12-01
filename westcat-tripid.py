@@ -44,7 +44,7 @@ def make_new_file(file, gtfs_zipped):
                 default_end_id = row["end_trip_id"]
                 row["start_trip_id"] = re.sub("[^0-9]+", "", default_start_id)
                 row["end_trip_id"] = re.sub("[^0-9]+", "", default_end_id)
-            new_csv_writer.writerow(row)
+                new_csv_writer.writerow(row)
         new_file.close()
         print(COLOR_GREEN + "Exported " + file_name + " with updated trip_id values." + COLOR_RESET)
 
